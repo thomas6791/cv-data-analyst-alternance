@@ -212,6 +212,36 @@ body {
     font-weight: bold;
 }
 
+/* Formations avec logos */
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc(var(--spacing-unit) * 1.5);
+}
+
+.education-info {
+    flex: 1;
+}
+
+.education-logo {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.education-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 /* Grille de compétences */
 .skills-grid {
     display: grid;
@@ -295,6 +325,16 @@ body {
     .skills-grid,
     .languages-grid {
         grid-template-columns: 1fr;
+    }
+
+    .education-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-logo {
+        width: 60px;
+        height: 60px;
     }
 }
 
